@@ -64,3 +64,7 @@
 
 (setq doom-localleader-key ",")
 
+;; https://github.com/ananthakumaran/tide/issues/357
+;; actually have a very large completion case at work
+(setq  tide-server-max-response-length 999999999)
+
