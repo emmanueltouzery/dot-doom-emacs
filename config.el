@@ -62,3 +62,5 @@
       "9" #'winum-select-window-9)
 (map! :leader "a" #'evil-switch-to-windows-last-buffer)
 
+(setq doom-localleader-key ",")
+
