@@ -68,3 +68,12 @@
 ;; actually have a very large completion case at work
 (setq  tide-server-max-response-length 999999999)
 
+;; we use eslint with typescript, not tslint.
+;; https://github.com/ananthakumaran/tide/issues/308
+;; https://github.com/hlissner/doom-emacs/issues/1530#issuecomment-507653761
+(add-hook 'typescript-mode-local-vars-hook
+          (lambda ()
+            (flycheck-add-next-checker 'typescript-tide 'javascript-eslint 'append)))
+(add-hook 'typescript-mode-local-vars-hook
+          (lambda ()
+            (flycheck-add-next-checker 'tsx-tide 'javascript-eslint 'append)))
