@@ -77,3 +77,7 @@
 (add-hook 'typescript-mode-local-vars-hook
           (lambda ()
             (flycheck-add-next-checker 'tsx-tide 'javascript-eslint 'append)))
+
+;; https://fedoraproject.org/wiki/How_to_use_Emacs_for_XML_editing#Set_up_schemas
+(eval-after-load 'rng-loc
+  '(add-to-list 'rng-schema-locating-files "~/.doom.d/xml/schemas.xml"))
