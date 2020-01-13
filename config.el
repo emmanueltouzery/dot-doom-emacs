@@ -66,6 +66,9 @@
 
 (setq org-agenda-files (list "~/Dropbox/org/todo.org"))
 
+(setq org-link-abbrev-alist
+      '(("redm"      . "https://redmine.lit-transit.com/issues/%s")))
+
 ;; https://github.com/ananthakumaran/tide/issues/357
 ;; actually have a very large completion case at work
 (setq  tide-server-max-response-length 999999999)
