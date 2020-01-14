@@ -86,3 +86,6 @@
 ;; https://fedoraproject.org/wiki/How_to_use_Emacs_for_XML_editing#Set_up_schemas
 (eval-after-load 'rng-loc
   '(add-to-list 'rng-schema-locating-files "~/.doom.d/xml/schemas.xml"))
+
+;; don't fold org-mode files when opening them
+(setq org-startup-folded nil)
