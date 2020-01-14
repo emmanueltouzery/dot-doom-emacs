@@ -89,3 +89,7 @@
 
 ;; don't fold org-mode files when opening them
 (setq org-startup-folded nil)
+
+;; we want typescript-mode for TSX files, definitely not web-mode
+;; https://github.com/hlissner/doom-emacs/issues/2252
+(add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
