@@ -93,3 +93,14 @@
 ;; we want typescript-mode for TSX files, definitely not web-mode
 ;; https://github.com/hlissner/doom-emacs/issues/2252
 (add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
+
+;; make myself a hydra similar to spacemacs' git microstate
+(defhydra hydra-magit ()
+  "magit"
+  ("n" git-gutter:previous-hunk "previous hunk")
+  ("p" git-gutter:next-hunk "next hunk")
+  ("d" git-gutter:popup-hunk "diff hunk")
+  ("r" git-gutter:revert-hunk "revert hunk")
+  ("s" git-gutter:stage-hunk "stage hunk"))
+
+(map! :leader "g ." #'hydra-magit/body)
