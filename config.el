@@ -103,4 +103,5 @@
   ("r" git-gutter:revert-hunk "revert hunk")
   ("s" git-gutter:stage-hunk "stage hunk"))
 
-(map! :leader "g ." #'hydra-magit/body)
+(map! :leader :desc "Git hydra" "g ." #'hydra-magit/body)
+(map! :leader :desc "Cycle agenda files" "o a c" #'org-cycle-agenda-files)
