@@ -97,8 +97,8 @@
 ;; make myself a hydra similar to spacemacs' git microstate
 (defhydra hydra-magit ()
   "magit"
-  ("n" git-gutter:previous-hunk "previous hunk")
-  ("p" git-gutter:next-hunk "next hunk")
+  ("p" git-gutter:previous-hunk "previous hunk")
+  ("n" git-gutter:next-hunk "next hunk")
   ("d" git-gutter:popup-hunk "diff hunk")
   ("r" git-gutter:revert-hunk "revert hunk")
   ("s" git-gutter:stage-hunk "stage hunk"))
