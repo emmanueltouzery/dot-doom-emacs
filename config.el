@@ -105,3 +105,11 @@
 
 (map! :leader :desc "Git hydra" "g ." #'hydra-magit/body)
 (map! :leader :desc "Cycle agenda files" "o a c" #'org-cycle-agenda-files)
+
+(defun save-noreindent ()
+  (interactive)
+  (fundamental-mode)
+  (save-buffer)
+  (normal-mode))
+
+(map! :leader :desc "Save without reindenting" "f w" #'save-noreindent)
