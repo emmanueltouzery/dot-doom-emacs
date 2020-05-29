@@ -113,3 +113,6 @@
   (normal-mode))
 
 (map! :leader :desc "Save without reindenting" "f w" #'save-noreindent)
+
+;; don't autocreate workspaces pretty please.
+(setq +workspaces-on-switch-project-behavior nil)
