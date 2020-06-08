@@ -108,9 +108,12 @@
 
 (defun save-noreindent ()
   (interactive)
-  (fundamental-mode)
+  (fundamental-mode) ;; disable all language-specific features including reindent
+  (ws-butler-mode -1) ;; disable delete trailing whitespace, only for this buffer
   (save-buffer)
-  (normal-mode))
+  (ws-butler-mode +1) ;; restore delete trailing whitespace, only for this buffer
+  (normal-mode)
+  )
 
 (map! :leader :desc "Save without reindenting" "f w" #'save-noreindent)
 
