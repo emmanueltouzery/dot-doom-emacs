@@ -122,4 +122,6 @@
 
 ;; https://magit.vc/manual/magit/Diff-Options.html
 ;; don't reverse video in the diffs, super distracting
-(setq magit-diff-refine-hunk (quote nil))
+(after! magit
+  (setq magit-diff-refine-hunk (quote nil)))
+
