@@ -125,3 +125,10 @@
 (after! magit
   (setq magit-diff-refine-hunk (quote nil)))
 
+
+(defun git-gupa ()
+  (interactive)
+  (shell-command "git pull --rebase --autostash 2> /dev/null | tail -n 1")
+  (magit-refresh-all))
+
+(map! :leader :desc "Git pull" "g p" #'git-gupa)
